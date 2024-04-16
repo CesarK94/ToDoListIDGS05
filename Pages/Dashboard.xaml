@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoListIDGS05.Pages.Dashboard"
+             NavigationPage.HasNavigationBar="False"
+             Title="Dashboard"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <Grid
+            BackgroundColor="#37465B"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <Grid Margin="30">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                
+                
+                <Label
+                    Grid.Column="0"
+                    Text="Hola: "
+                    VerticalOptions="Center"
+                    FontSize="Medium"
+                    />
+                
+                <Label x:Name="UserEmial" 
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"
+                       VerticalOptions="Center"
+                       FontSize="Default"/>
+                <Button
+                    Grid.Column="2"
+                    Text="Logout"
+                    Command="{Binding Logout}"
+                    BackgroundColor="#726EFE"/>
+                    
+                </Grid>
+            </StackLayout>
+
+            <Frame
+        Grid.Row="1"
+        Margin="0,0,0,-40"
+        BorderColor="#08C6AB"
+        BackgroundColor="#212B38"
+        CornerRadius="50"
+        HasShadow="True"
+        HeightRequest="700">
+                <Grid
+            Padding="20,50,20,0"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="20"
+            VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+    
+</ContentPage>
